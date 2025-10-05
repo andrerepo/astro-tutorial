@@ -1,7 +1,9 @@
 ---
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
-const pageTitle = "Home";
+const pageTitle = "My Astro Site";
 ---
 
 <html lang="en">
@@ -10,13 +12,13 @@ const pageTitle = "Home";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>My Astro Site</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">{pageTitle}</a>
-    <a href="/about/">About</a>
-    <a href="/blog">Blog</a>
+    <Navigation />
 
-    <h1>My Astro Site</h1>
+    <h1>{pageTitle}</h1>
+
+    <Footer />
   </body>
 </html>
