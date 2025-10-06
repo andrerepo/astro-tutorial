@@ -3,11 +3,11 @@ import { formatDate } from "../scripts/utils.js";
 
 const { frontmatter } = Astro.props;
 
-const dateTxt = formatDate(frontmatter.pubDate);
+const date = formatDate(frontmatter.pubDate);
 ---
 
 <meta charset="utf-8" />
 <h1>{frontmatter.title}</h1>
 <p>Written by {frontmatter.author}</p>
-<p>Published on: {dateTxt}</p>
+<p>Published on: {date}</p>
 <slot />
