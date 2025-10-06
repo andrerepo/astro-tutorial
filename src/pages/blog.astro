@@ -1,9 +1,8 @@
 ---
 import "../styles/global.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-const pageTitle = "My Astro Learning BLog";
+const pageTitle = "My Astro Learning Blog";
 ---
 
 <html lang="en">
@@ -15,15 +14,13 @@ const pageTitle = "My Astro Learning BLog";
     <title>Blog</title>
   </head>
   <body>
-    <Header />
-    <h1>{pageTitle}</h1>
-    <p>This is where I will post about my journey learning Astro.</p>
-    <ul>
-      <li><a href="/posts/post-1/">Post 1</a></li>
-      <li><a href="/posts/post-2/">Post 2</a></li>
-      <li><a href="/posts/post-3/">Post 3</a></li>
-    </ul>
-
-    <Footer />
+    <BaseLayout {pageTitle}>
+      <p>This is where I will post about my journey learning Astro.</p>
+      <ul>
+        <li><a href="/posts/post-1/">Post 1</a></li>
+        <li><a href="/posts/post-2/">Post 2</a></li>
+        <li><a href="/posts/post-3/">Post 3</a></li>
+      </ul>
+    </BaseLayout>
   </body>
 </html>
