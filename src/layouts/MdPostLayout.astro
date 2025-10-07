@@ -8,6 +8,8 @@ const date = formatDate(frontmatter.pubDate);
 
 <meta charset="utf-8" />
 <h1>{frontmatter.title}</h1>
-<p>Written by {frontmatter.author}</p>
 <p>Published on: {date}</p>
+<p><em>{frontmatter.description}</em></p>
+<p>Written by: {frontmatter.author}</p>
+<img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
 <slot />
