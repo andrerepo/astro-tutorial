@@ -7,7 +7,7 @@ const blog = defineCollection({
   loader: glob({ pattern: "**/[^_]*.md", base: "./src/blog" }),
   schema: z.object({
     title: z.string(),
-    pubDate: z.date(),
+    pubDate: z.date().or(z.string()),
     description: z.string(),
     author: z.string(),
     image: z.object({
